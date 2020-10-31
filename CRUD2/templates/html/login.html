@@ -1,0 +1,16 @@
+{% extends 'html/home.html'%}
+
+{% block content %}
+
+{% if error %}
+{{ error }}
+{% endif %}
+
+<form method="post" action="">{% csrf_token %}
+USERNAME<input type=username placeholder="username" name="username"><br>
+PASSWORD<input type=password placeholder="password" name="password">
+<input type="submit" value="login">
+</form>
+
+
+{% endblock %}
